@@ -8,7 +8,7 @@ all: download_test config_test
 
 download_test:
 	( if [ ! -d $(THISDIR)/$(SRC_NAME) ]; then \
-		git clone -b main https://github.com/matthew-gitt/msdlite-new.git ; \
+		git clone https://github.com/matthew-gitt/msdlite-new.git ; \
 		cd $(SRC_NAME) ; \
 		git submodule update --init --recursive ; \
 		patch -p1 -i ../msd_lite.diff ; \
